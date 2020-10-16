@@ -1,0 +1,85 @@
+:root {
+  /* background */
+  --c-light: #FCFED6;
+  --c-pink: #FCFED6;
+  --c-accent: #456EAE;
+  --c-green: #6DA686;
+  --c-grey: #CECECE;
+
+  /* text */
+  --c-txt-grey: #9A9A9A;
+  --c-txt-white: #F2FDFF;
+  --c-txt-black: #000000;
+
+  /* fonts */
+  --font-main: 'Roboto', sans-serif;
+}
+
+*{  
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+body {  
+  font-family: var(--font-main);
+  background: var(--c-grey);
+}
+
+.wrapper {
+  background: linear-gradient(#D5D2BF 40%, #D6B13E 60% , #C07414 85%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  max-width: 1000px;
+  margin: auto;
+  box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
+  padding-bottom:25px;
+}
+
+.app-title {
+  margin-top: 40px;
+  text-align: center;
+  letter-spacing: 0.3px;
+  font-size: 30px;
+  color: var(--c-txt-black);
+}
+
+.company-subtitle {
+  text-align: center;
+  letter-spacing: 0.2px;
+  font-size: 20px;    
+  color: var(--c-txt-black);
+}
+
+.add-todo-list{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.add-todo-list-btn {
+  background: var(--c-accent);
+  font-size: 20px;
+  line-height: 22px;
+  color: var(--c-txt-white);
+  padding: 10px 20px;
+  border: 1px solid #32486D;
+  border-radius: 0.5%;
+  box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+  cursor: pointer;
+  text-decoration: none;
+
+}
+
+.plus-item {
+  font-size: 30px;
+  color: #32486D;
+}
+
+.footer {
+  text-align: center;
+  color: var(--c-txt-white);
+  margin-top: 35px;
+}
