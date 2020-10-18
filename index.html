@@ -5,24 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIMPLE TODO LISTS</title>
     <link rel="stylesheet" href="css/style.css"/>
+    <script src="https://kit.fontawesome.com/3149721bca.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <base target="_blank">
 </head>
 <body>
-    <!-- Main page -->
+    <!-- app background -->
     <div class="wrapper">
+        <!-- heading of the app -->
         <div class="title-container">
             <h3 class="app-title">SIMPLE TODO LISTS</h3>
             <h4 class="company-subtitle">FROM RUBY GARAGE</h4>
         </div>
-        <div class="add-todo-list">
+        
+        <form action="">
+            <div class="todo-list-container">
+                <div class="todo-list-title">
+                    <i class="fas fa-calendar-alt"></i>
+                    <input type="text" id="todo-list-input" name="todo-list-input" value="">
+                    <button class="list-edit list-btn" id="list-edit">
+                        <i class="fas fa-pen"></i>
+                    </button>
+                    <button class="list-to-bin list-btn" id="list-bin">
+                        <i class="far fa-trash-alt"></i>
+                    </button>
+                </div>
+                <div class="task-input-container">
+                    <span class="green-plus-item">+</span>  
+                    <div class="task-input-area">                
+                        <input type="text" id="task-input-field" name="task-input-field"
+                            placeholder="Start typing here to create a task" value="">
+                        <button class="add-task" id="add-new-task">
+                            <a href="" class="add-task-btn">Add Task</a>
+                        </button>
+                    </div> 
+                </div>
+
+                <textarea cols="2" rows="1" ></textarea>
+            </div>
+        </form>
+
+
+        <button class="add-todo-list" id="add-todo-btn">
             <a href="" class="add-todo-list-btn">
                 <span class="plus-item">+</span> Add TODO List
             </a>
-        </div>
+        </button>
         <footer class="footer">
-            <p> © Ruby Garage </p>
+            <p class="copyright"> © Ruby Garage </p>
         </footer>
+
+        <!-- Modals -->
+            <!-- authorization and authentification form -->
+        <!-- <div class=" modal container">
+            <form action="/action_page.php">
+                <div class="row">
+                <h2 style="text-align:center">Login with Social Media or Manually</h2>
+                <div class="vl">
+                    <span class="vl-innertext">or</span>
+                </div>
+
+                <div class="col">
+                    <a href="https://www.facebook.com/" class="fb btn">
+                        <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                    </a>                   
+                    <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+                        </i> Login with Google+
+                    </a>
+                    <a href="#" class="twitter btn">
+                        <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+                    </a>
+                </div>
+
+                <div class="col">
+                    <div class="hide-md-lg">
+                        <p>Or sign in manually:</p>
+                    </div>
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="submit" value="Login">
+                </div>
+                
+                </div>
+            </form>
+            <div class="bottom-container">
+            <div class="row">
+                <div class="col">
+                    <a href="#" style="color:white" class="btn">Sign up</a>
+                </div>
+                <div class="col">
+                    <a href="#" style="color:white" class="btn">Forgot password?</a>
+                </div>
+            </div>
+            </div>        
+        </div> -->
     </div>
     
    

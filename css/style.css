@@ -27,50 +27,218 @@ body {
   background: var(--c-grey);
 }
 
+
+/* Modals */
+
+.body-scroll-disable {
+  overflow: hidden;
+}
+
+/* Mobile menu  */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+  display: block;
+  background: var(--modal-bgd-dark);
+  z-index: 3;
+}
+.modal-active {
+  opacity: 1;
+  pointer-events: all;
+  display: block;
+}
+
+.modal-close-btn {
+  font-size: 18px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: var(--txt-c-grey);
+  cursor: pointer;
+}
+
+/* App background */
 .wrapper {
   background: linear-gradient(#D5D2BF 40%, #D6B13E 60% , #C07414 85%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: max-content;
   max-width: 1000px;
   margin: auto;
   box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
   padding-bottom:25px;
 }
-
+/* Heading of the app */
 .app-title {
   margin-top: 40px;
   text-align: center;
   letter-spacing: 0.3px;
-  font-size: 30px;
+  font-size: 25px;
+  line-height: 26px;;
   color: var(--c-txt-black);
 }
 
 .company-subtitle {
   text-align: center;
   letter-spacing: 0.2px;
-  font-size: 20px;    
+  font-size: 15px;  
+  font-weight: 300;
+  line-height: 16px;  
   color: var(--c-txt-black);
+  margin-top: 10px;
 }
+
+/* style the container */
+/* .container {
+  position: relative;
+  padding: 20px 0 30px 0;
+  margin: 50px;
+}  */
+
+/* style inputs and link buttons */
+/* input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 1px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  text-align: center;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+/* add appropriate colors to fb, twitter and google buttons */
+/* .fb {
+  background-color: var(--c-accent);
+  color: white;
+}
+
+.google {
+  background-color: var(--c-green);
+  color: white;
+}
+
+.twitter {
+  background-color: #60afec;
+  color: white;
+}
+
+/* style the submit button */
+/* input[type=submit] {
+  background-color: var(--c-green);
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: var(--c-green);
+} */
+
+/* input[type=text] {
+  background: transparent;
+  border: solid 0.5px var(--c-green);
+} */
+
+input[type=password] {
+  background: transparent;
+  border: solid 0.5px var(--c-green);
+}
+
+/* Two-column layout */
+/* .col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+/* .row:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  height: 160px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+} */
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+   border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  } */
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+ 
 
 .add-todo-list{
   margin-top: 50px;
   text-align: center;
 }
 
-.add-todo-list-btn {
+.add-todo-list{
   background: var(--c-accent);
+  border: 1px solid #32486D;
+  border-radius: 0.5%;
+  box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+}
+
+.add-todo-list-btn {
   font-size: 20px;
   line-height: 22px;
   color: var(--c-txt-white);
   padding: 10px 20px;
-  border: 1px solid #32486D;
-  border-radius: 0.5%;
-  box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
   cursor: pointer;
   text-decoration: none;
-
 }
 
 .plus-item {
@@ -78,8 +246,114 @@ body {
   color: #32486D;
 }
 
+.todo-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 700px;
+}
+
+.todo-list-title {
+  /* width: 100%; */
+  background: var(--c-accent);
+  font-size: 20px;
+  line-height: 22px;
+  color: var(--c-txt-white);
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border: 1px solid #32486D;
+  border-radius: 0.5%;
+  box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.fa-calendar-alt {
+  font-size: 25px;
+  color: #32486D;
+  margin: 10px;
+}
+
+input[name=todo-list-input] {
+width: 100%;
+padding: 12px;
+border: none;
+margin: 5px 0;
+font-size: 17px;
+line-height: 20px;
+text-decoration: none;
+background: transparent;
+color: var(--c-txt-white);
+text-align: left;
+}
+
+.list-btn {
+  font-size: 15px;
+  background: var(--c-accent);
+  color: var(--c-txt-grey);
+  margin: 15px;
+  border: none;
+}
+
+.task-input-container {
+  background-color: var(--c-grey);
+  display: flex;
+}
+
+.green-plus-item {
+  font-size: 50px;
+  color: var(--c-green);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+}
+
+.task-input-area {
+  display: flex;
+  
+}
+
+.add-task {
+  background: var(--c-green);
+  min-width: 100px;
+}
+
+.add-task-btn {
+  display: inline-block;
+  width: 100%;
+  border: 1px top var(--c-grey);
+  margin: 5px 0;
+  font-size: 17px;
+  line-height: 20px;
+  color: var(--c-txt-white);
+  cursor: pointer;
+  text-decoration: none;
+ 
+}
+
+input[name=task-input-field] {
+  color: var(--c-txt-grey);
+  text-align: left;
+  width: 100%;
+  min-width: 300px;
+  padding: 12px;
+  border: 1px top var(--c-grey);
+  margin: 5px 0;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none;
+  text-align: left;
+}
+
 .footer {
   text-align: center;
   color: var(--c-txt-white);
   margin-top: 35px;
+}
+
+.copyright {
+  font-size: 10px;
+  font-weight: 5;
 }
